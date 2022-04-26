@@ -5,39 +5,61 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventos DOM</title>
+  <title>Praticando Event Listener</title>
   <style>
-    body{
-      font: bold 15pt arial;
-      -webkit-font-smooth: antialiased;
-    }
-    .container {
+    body {
+      margin: 0;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #f3f3f3;
-      box-shadow: rgb(0, 0, .1);
-      border-radius: 4px;
-      color: #333;
-      width: 200px;
-      height: 200px;
-      padding: 10px;
-      box-sizing: border-box;
+      height: 100vh;
+      color: #111;
+    }
+
+    .container {
+      font: normal 1.5rem gotham rounded;
+      background: #9ACD32;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container:hover {
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
-  <div class="container" onclick="clicar()">
+  <div class="container">
     <p>interaja...</p>
   </div>
+
   <script>
-    function clicar(){
-      var a = document.getElementsByClassName('container')[0]
-      a.style.background = "#999"
-      a.innerText = "clicou!"
+    var area = document.querySelector('.container')
+
+    area.addEventListener('click', clicar)
+    area.addEventListener('mouseenter', entrar)
+    area.addEventListener('mouseout', sair)
+
+    function clicar() {
+      area.innerText = "Clicou!"
+      area.style.background = "#FF4500"
+    }
+    function entrar() {
+      area.innerText = "Entrou!"
+      area.style.background = "#FFA500"
+    }
+    function sair() {
+      area.innerText = "Saiu!"
+      area.style.background = "#9ACD32"
     }
   </script>
+
 </body>
 
 </html>

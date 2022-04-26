@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somando Números</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      -webkit-font-smooth: antialiased;
+    }
+
+    .container {
+      background-color: #fddb8a;
+      border: solid 2px #222;
+      border-radius: 4px;
+      padding: 1rem 4rem;
+    }
+
+    h1 {
+      font-family: gotham rounded;
+      color: #222;
+      font-weight: 400;
+    }
+
+    input {
+      font-family: gotham rounded;
+      font-size: 1.5rem;
+      border: solid 2px #222;
+      border-radius: 4px;
+      display: block;
+      margin-bottom: .5rem;
+      width: 150px;
+      height: 50px;
+      text-align: center;
+
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+      background: #fec63e;
+      width: initial;
+      height: initial;
+      font-size: 1rem;
+    }
+
+    #resultado {
+      font-family: gotham rounded;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    input,
+    #resultado {
+      margin: 1rem auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Calculadora</h1>
+    <input type="text" name="txtn1" id="txtn1">
+    <input name="txtn2" id="txtn2">
+    <input class="btn" type="button" value="SOMAR!" onclick="somar()">
+      <div id="resultado">⠀</div>
+  </div>
+
+  <script>
+    function somar() {
+      var tn1 = document.getElementById('txtn1')
+      var tn2 = document.getElementById('txtn2')
+      var resultado = document.querySelector('#resultado')
+      var n1 = Number(tn1.value)
+      var n2 = Number(tn2.value)
+      var s = n1 + n2
+      resultado.innerHTML = `${n1} + ${n2} = ${s}!`
+    }
+  </script>
+</body>
+
+</html>
