@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   font: normal 1rem 'segoe UI';
-  color: #111;
+  -webkit-font-smooth:antialiased;
 }
 h1, 
 p {
@@ -16,6 +16,7 @@ p {
   padding: 0;
 }
 .container {
+  color: #222;
   background-color: #FFF;
   padding: 2rem 0;
   width: 400px;
@@ -25,7 +26,7 @@ p {
   box-sizing: border-box;
 }
 section {
-  color: #222;
+  color: #333;
   padding: 1rem 0;
   width: 250px;
   margin: 0 auto;
