@@ -58,3 +58,23 @@ section {
   text-align: right;
   width: 50px;
 }
+.resultado p {
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+/* 
+recebe data;
+usa data para receber ano;
+recebe input do formulário
+define resultado como local a ser modificado
+
+determina que o input precisa de ao menos 4caracteres;
+se sim > continua com o processo,
+se não > interrompe mostra mensagem alerta
+
+
+ */

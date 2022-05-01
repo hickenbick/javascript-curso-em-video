@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificador de Idade</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Verificador de Idade</h1>
+  </header>
+  <section class="container">
+    <div class="align-center">
+      <p>Ano de nascimento: <input type="text" class="inputano"></p>
+    </div>
+    <div class="align-center">
+      <p>Sexo: 
+        <input type="radio" id="masculino" name="radialsexo" checked>
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="feminino" name="radialsexo">
+        <label for="feminino">Feminino</label>
+      </p> 
+    </div>
+    <div class="align-center">
+      <button class="btn" onclick="verificar()">VERIFICAR</button>
+    </div>
+    <div class="align-center">
+      <p class="resultado"></p>
+    </div>
+    <div class="align-center">
+      <p class="foto"></p>
+    </div>
+  </section>
+  <footer>
+    <p class="italic">&copy; Codificado por Rodrigo Hickenbick</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
+
